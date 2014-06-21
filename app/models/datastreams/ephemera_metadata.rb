@@ -8,13 +8,26 @@ class EphemeraMetadata < ActiveFedora::OmDatastream
     t.description(index_as: :stored_searchable)
     t.publisher(index_as: :stored_searchable)
     t.date(index_as: :stored_searchable)
+    t.tag(index_as: :stored_searchable)
+    t.contributors(index_as: :stored_searchable)
+    t.coverage(index_as: :stored_searchable)
+    t.text(index_as: :stored_searchable)
+    t.notes(index_as: :stored_searchable)
     t.identifier
     t.format
     t.source
     t.relation
-    t.coverage
+    t.related_to
+    t.technique
     t.rights
-    t.contributor
+    t.date_created
+    t.repository
+    t.doc_type
+    t.width
+    t.height
+    t.language
+    t.audience
+    
   
   end
   
