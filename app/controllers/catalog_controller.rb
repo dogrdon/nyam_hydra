@@ -60,7 +60,7 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field solr_name('title', :stored_searchable, type: :string), :label => 'Title:'
+    config.add_index_field solr_name('title', :stored_searchable, type: :string), :label => 'Title'
     config.add_index_field solr_name('title_vern', :stored_searchable, type: :string), :label => 'Title:'
     config.add_index_field solr_name('author', :stored_searchable, type: :string), :label => 'Author:'
     config.add_index_field solr_name('author_vern', :stored_searchable, type: :string), :label => 'Author:'
@@ -72,7 +72,7 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
-    config.add_show_field solr_name('title', :stored_searchable, type: :string), :label => 'Title:'
+    config.add_show_field solr_name('title', :stored_searchable, type: :string), :label => 'Title'
     config.add_show_field solr_name('title_vern', :stored_searchable, type: :string), :label => 'Title:'
     config.add_show_field solr_name('subtitle', :stored_searchable, type: :string), :label => 'Subtitle:'
     config.add_show_field solr_name('subtitle_vern', :stored_searchable, type: :string), :label => 'Subtitle:'
@@ -86,6 +86,10 @@ class CatalogController < ApplicationController
     config.add_show_field solr_name('published_vern', :stored_searchable, type: :string), :label => 'Published:'
     config.add_show_field solr_name('lc_callnum', :stored_searchable, type: :string), :label => 'Call number:'
     config.add_show_field solr_name('isbn', :stored_searchable, type: :string), :label => 'ISBN:'
+
+    #additional fields for the single result
+    config.add_show_field solr_name('description', :stored_searchable, type: :string, :label => 'Description:')
+    config.add_show_field solr_name('text', :stored_searchable, type: :string, :label => 'Text:')
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
