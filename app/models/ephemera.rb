@@ -8,7 +8,7 @@ class Ephemera < ActiveFedora::Base
   has_attributes :title, datastream: 'descMetadata', multiple: false
   has_attributes :creator, datastream: 'descMetadata', multiple: true
   has_attributes :subject, datastream: 'descMetadata', multiple: true
-  has_attributes :description, datastream: 'descMetadata', multiple: true
+  #has_attributes :description, datastream: 'descMetadata', multiple: true
   has_attributes :publisher, datastream: 'descMetadata', multiple: false
   has_attributes :date, datastream: 'descMetadata', multiple: false
   has_attributes :identifier, datastream: 'descMetadata', multiple: false
@@ -18,8 +18,8 @@ class Ephemera < ActiveFedora::Base
   has_attributes :coverage, datastream: 'descMetadata', multiple: true
   has_attributes :rights, datastream: 'descMetadata', multiple: true
   has_attributes :contributors, datastream: 'descMetadata', multiple: true
-  has_attributes :text, datastream: 'descMetadata', multiple: false
-  has_attributes :notes, datastream: 'descMetadata', multiple: true
+  #has_attributes :text, datastream: 'descMetadata', multiple: false
+  #has_attributes :notes, datastream: 'descMetadata', multiple: true
   has_attributes :related_to, datastream: 'descMetadata', multiple: false
   has_attributes :technique, datastream: 'descMetadata', multiple: true
   has_attributes :date_created, datastream: 'descMetadata', multiple: false
