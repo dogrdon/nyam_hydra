@@ -10,7 +10,7 @@ class Page < ActiveFedora::Base
   has_attributes :number, datastream: 'descMetadata', multiple: false
   has_attributes :text, datastream: 'descMetadata', multiple: false
   has_attributes :notes, datastream: 'descMetadata', multiple: false
-  has_attributes :description, datastream: 'descMetadata', multiple: true
+  #has_attributes :description, datastream: 'descMetadata', multiple: true
   
   
   has_file_datastream "pageContent"
