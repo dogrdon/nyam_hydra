@@ -5,6 +5,9 @@ class Ephemera < ActiveFedora::Base
   #associate with pages
   has_many :pages, :property=> :is_part_of
   
+  has_attributes :cdmid, datastream: 'descMetadata', multiple: false
+  has_attributes :child_of, datastream: 'descMetadata', multiple: false
+  has_attributes :object_type, datastream: 'descMetadata', multiple: false
   has_attributes :title, datastream: 'descMetadata', multiple: false
   has_attributes :creator, datastream: 'descMetadata', multiple: true
   has_attributes :subject, datastream: 'descMetadata', multiple: true
@@ -17,12 +20,11 @@ class Ephemera < ActiveFedora::Base
   has_attributes :relation, datastream: 'descMetadata', multiple: false
   has_attributes :coverage, datastream: 'descMetadata', multiple: true
   has_attributes :rights, datastream: 'descMetadata', multiple: true
-  has_attributes :contributors, datastream: 'descMetadata', multiple: true
-  #has_attributes :text, datastream: 'descMetadata', multiple: false
+  has_attributes :contributor, datastream: 'descMetadata', multiple: true
   has_attributes :notes, datastream: 'descMetadata', multiple: true
   has_attributes :related_to, datastream: 'descMetadata', multiple: false
   has_attributes :technique, datastream: 'descMetadata', multiple: true
-  has_attributes :date_created, datastream: 'descMetadata', multiple: false
+  has_attributes :date, datastream: 'descMetadata', multiple: false
   has_attributes :repository, datastream: 'descMetadata', multiple: true
   has_attributes :doc_type, datastream: 'descMetadata', multiple: true
   has_attributes :height, datastream: 'descMetadata', multiple: false
@@ -30,6 +32,8 @@ class Ephemera < ActiveFedora::Base
   has_attributes :language, datastream: 'descMetadata', multiple: true
   has_attributes :audience, datastream: 'descMetadata', multiple: true
   has_attributes :tag, datastream: 'descMetadata', multiple: true
+  has_attributes :cdmcreated, datastream: 'descMetadata', multiple: true
+  has_attributes :cdmmodified, datastream: 'descMetadata', multiple: true
 
   
 

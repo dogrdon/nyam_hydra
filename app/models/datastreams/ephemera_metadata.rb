@@ -9,10 +9,13 @@ class EphemeraMetadata < ActiveFedora::OmDatastream
     t.publisher(index_as: :stored_searchable)
     t.date(index_as: :stored_searchable)
     t.tag(index_as: :stored_searchable)
-    t.contributors(index_as: :stored_searchable)
+    t.contributor(index_as: :stored_searchable)
     t.coverage(index_as: :stored_searchable)
     t.text(index_as: :stored_searchable)
     t.notes(index_as: :stored_searchable)
+    t.cdmid
+    t.child_of
+    t.object_type
     t.identifier
     t.format
     t.source
@@ -27,6 +30,8 @@ class EphemeraMetadata < ActiveFedora::OmDatastream
     t.height
     t.language
     t.audience
+    t.cdmcreated
+    t.cdmmodified
     
   
   end
