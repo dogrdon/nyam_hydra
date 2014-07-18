@@ -3,7 +3,7 @@ class Ephemera < ActiveFedora::Base
   has_metadata 'descMetadata', type: EphemeraMetadata
   
   #associate with pages
-  has_many :pages, :property=> :is_part_of
+  has_many :ephemera_pages, :property=> :is_part_of
   
   has_attributes :cdmid, datastream: 'descMetadata', multiple: false
   has_attributes :child_of, datastream: 'descMetadata', multiple: false

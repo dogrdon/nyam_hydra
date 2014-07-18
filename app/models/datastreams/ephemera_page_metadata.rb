@@ -2,9 +2,9 @@ class Datastreams::EphemeraPageMetadata < ActiveFedora::OmDatastream
   
   set_terminology do |t|
     t.root(path: "fields")
-    t.number(index_as: :stored_searchable, type: :integer)
     t.text(index_as: :stored_searchable)
     t.cdmid
+    t.notes
     t.child_of
     t.object_type
     t.filename
